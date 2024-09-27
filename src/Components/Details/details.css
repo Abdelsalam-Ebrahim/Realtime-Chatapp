@@ -1,0 +1,120 @@
+.details {
+    flex: 1;
+    overflow: auto;
+    
+    .user {
+        padding: 10px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        border-bottom: 1px solid #dddddd35;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* object-fit: cover; */
+        }
+
+        p {
+            font-size: 13px;
+            color: #a5a5a5;
+        }
+    }
+
+    .info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        transition: .3s;
+
+        .option {
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                img {
+                    width: 30px;
+                    height: 30px;
+                    background-color: rgba(17, 25, 40, .3);
+                    padding: 10px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+            
+            .photos {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 10px;
+
+                .photoItem {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .photoDetail {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 5px;
+                            /* object-fit: cover; */
+                        }
+
+                        span {
+                            font-size: 14px;
+                            color: lightgrey;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                        background-color: rgba(17, 25, 40, .3);
+                        padding: 10px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    }
+                }
+
+                .empty {
+                    p {
+                        
+                    }
+                }
+            }
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgba(230, 74, 105, .553);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                background-color: rgba(220, 20, 60, .796);
+            }
+
+            &.logout {
+                background-color: #1a73e8;
+
+                &:hover {
+                    background-color: #1053ac;
+                }
+            }
+        }
+    }
+}
