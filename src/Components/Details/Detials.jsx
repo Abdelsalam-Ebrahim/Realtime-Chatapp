@@ -87,8 +87,7 @@ export default function Details ( { sharedImages } ) {
 
                     <div className="photos" ref={showImgsRef} style={{display: "none"}} >
 
-                        { images ? 
-
+                        { images && images != "" ? 
                             images.map((image, idx) => {
                                 return <div className="photoItem" key={idx}>
                                     <div className="photoDetail">
@@ -101,10 +100,11 @@ export default function Details ( { sharedImages } ) {
                             })
 
                             :
+                            <>
 
                             <div className="empty">
                                 <p>No Photos Shared Yet</p>
-                            </div>
+                            </div></>
                         }
                     </div>
                 </div>

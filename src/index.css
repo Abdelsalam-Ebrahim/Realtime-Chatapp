@@ -8,6 +8,7 @@
 
 body {
   background-image: url(./Images/bg.jpg);
+  /* background-color: #5F4B8B; */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -191,17 +191,15 @@ export default function Chat () {
 
             <div className="bottom">
                 <div className={`icons ${(isCurrentUserBlocked || isReceiverBlocked) ? "blocked" : "" }`}>
-                    {/* <i className="fa-regular fa-image"></i> */}
-                    {/* <i className="fa-solid fa-camera"></i> */}
-                    {/* <i className="fa-solid fa-microphone"></i> */}
 
                     <label htmlFor="file">
-                        <img src="./src/Images/img.png" alt="" />
+                        <i className="fa-regular fa-image"></i>
+                        {/* <img src="./src/Images/img.png" alt="" /> */}
                     </label>
                     <input type="file" id="file" style={{display: 'none'}} onChange={hanldeImg} disabled={isCurrentUserBlocked || isReceiverBlocked} />
 
-                    <img src="./src/Images/camera.png" alt="" />
-                    <img src="./src/Images/mic.png" alt="" />
+                    <i className="fa-solid fa-camera"></i>
+                    <i className="fa-solid fa-microphone"></i>
                 </div>
 
                 <input 

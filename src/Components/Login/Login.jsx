@@ -15,13 +15,7 @@ export default function Login () {
 
         <div className="login">
 
-            { logged ?  <>
-            
-                <SignIn />
-                <button onClick={goSignUp} className="button-signup" > Sign Up </button>
-            
-            </> : <Signup setLogged={ setLogged } /> }
-            
+            { logged ?  <SignIn goSignUp={goSignUp} />: <Signup setLogged={ setLogged } /> }
 
             {/* <div className="separator"></div> */}
             {/* <Signup /> */}

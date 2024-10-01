@@ -144,6 +144,16 @@
             cursor: pointer;
         }
 
+        svg {
+            width: 20px;
+            height: 20px;
+
+        }
+        
+        .fa-regular.fa-image {
+            cursor: pointer;
+        }
+
         .emoji {
             position: relative;
 

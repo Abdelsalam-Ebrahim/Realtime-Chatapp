@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AddUser from "./addUser/AddUser";
 import { useUserStore } from "../../../lib/userStore";
 import { doc, getDoc, onSnapshot, updateDoc } from "firebase/firestore";
-import { db } from "../../../lib/firebase";
+import { auth, db } from "../../../lib/firebase";
 import { useChatStore } from "../../../lib/chatStore";
 
 
@@ -14,7 +14,8 @@ export default function Chatlist () {
     const [input, setInput] = useState("");
 
     const { currentUser }  = useUserStore();
-    const { changeChat } = useChatStore();
+    const { changeChat, chatId } = useChatStore();
+
 
     useEffect( () => {
         const unSub = onSnapshot(doc(db, "userchats", currentUser.id), async (res) => {
@@ -101,8 +102,10 @@ export default function Chatlist () {
             </div>
 
             {!addMode && <AddUser />}
-
+            
+            { !chatId && <button className="log-out" onClick={ () => auth.signOut() } >Logout</button> }
+            
         </div>
-    
+            
     </>
 }

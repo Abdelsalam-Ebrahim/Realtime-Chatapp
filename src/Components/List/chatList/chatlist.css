@@ -2,6 +2,10 @@
     /* flex: 1; */
     overflow: auto;
     /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
 
     .search {
         display: flex;
@@ -23,7 +27,7 @@
                 border: none;
                 outline: none;
                 color: white;
-                /* flex: 1; */
+                flex: 1;
             }
 
             svg {
@@ -77,6 +81,22 @@
                     color: #a5a5a5;
                 }
             }
+        }
+    }
+
+    button.log-out {
+        display: block;
+        padding: 10px 100px;
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .3s;
+        margin: 20px auto;
+
+        &:hover {
+            background-color: #1053ac;
         }
     }
 }

@@ -77,6 +77,9 @@
     }
 
     .button-signup {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
         padding: 20px;
         border: none;
         background-color: #1f8ef1;
@@ -85,10 +88,9 @@
         cursor: pointer;
         font-weight: 500;
         transition: 0.3s ease;
-        width: 31%;
-    }
 
-    .button-signup:hover {
-        background-color: #1b78e0;
+        &:hover {
+            background-color: #1b78e0;
+        }
     }
 }

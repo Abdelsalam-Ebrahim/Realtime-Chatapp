@@ -6,12 +6,13 @@ import { auth } from "../../../lib/firebase";
 import { useUserStore } from "../../../lib/userStore";
 
 
-export default function SignIn () {
+// eslint-disable-next-line react/prop-types
+export default function SignIn ( { goSignUp } ) {
 
     const [loading, setLoading] = useState(false);
+    const { fetchUserInfo } = useUserStore();    
 
-    const { fetchUserInfo } = useUserStore();
-
+    
     async function handleForm(e) {
         e.preventDefault();
         setLoading(true);
@@ -35,7 +36,6 @@ export default function SignIn () {
             setLoading(false);
         }
     }
-
 
     return <>
     
@@ -63,6 +63,8 @@ export default function SignIn () {
                 </form>
 
             </div>
+
+            <button onClick={goSignUp} className="button-signup" > Sign Up </button>
         </div>
     
     </>
